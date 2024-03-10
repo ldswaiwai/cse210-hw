@@ -8,6 +8,8 @@ class Program
     {
         Console.WriteLine("Welcome to the Journal Program!");
 
+        Journal myJournal = new Journal();
+
         string userChoice =""; 
         while (userChoice != "5") 
         { 
@@ -22,31 +24,32 @@ class Program
                 newEntry._date = theCurrentTime.ToShortDateString();
                 newEntry._promptText = prompt.GetRandomPrompt();
                 newEntry._entryText = Console.ReadLine();
-                Journal myJournal = new Journal();
                 myJournal.AddEntry(newEntry);
             }
 
             else if (userChoice =="2")
             {
-                Journal newJournal = new Journal();
-                newJournal.Display();
+                myJournal.Display();
             }
 
             else if (userChoice =="3")
             {
                 Console.WriteLine("What is the filename?");
-                String file = Console.ReadLine();
-                Journal newJournal = new Journal();
-                newJournal.LoadFromFile(file);
+                string file = Console.ReadLine();
+                myJournal.LoadFromFile(file);
             }
         
             else if (userChoice =="4")
             {
                 Console.WriteLine("What is the filename?");
                 string file = Console.ReadLine();
-                Journal newJournal = new Journal();
-                newJournal.SaveToFile(file);
+                myJournal.SaveToFile(file);
                 Console.WriteLine("Your entry has been saved successfully!");
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid option.");
             }
         }
     }

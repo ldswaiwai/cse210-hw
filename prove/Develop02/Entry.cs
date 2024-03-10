@@ -4,8 +4,8 @@ public class Entry
     public string _promptText;
     public string _entryText;
 
-    public void Display()
+    public string Display()
     {
-        Console.WriteLine($"Date: {_date} - Prompt: {_promptText} Your Response: {_entryText}");
+        return $"Date: {_date} - Prompt: {_promptText} Your Response: {_entryText}";
     }
 }

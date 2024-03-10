@@ -17,8 +17,7 @@ public class Journal
         
         foreach (var entry in _entries)
         {
-            Entry newEntry = new Entry();
-            newEntry.Display();
+            Console.WriteLine(entry.Display());
         }
 
     }
@@ -27,7 +26,10 @@ public class Journal
     {
         using (StreamWriter outputFile = new StreamWriter (file))
         {
-            outputFile.WriteLine(_entries);
+            foreach (var entry in _entries)
+            {
+                outputFile.WriteLine(entry.Display());
+            }
         }   
     }
 
