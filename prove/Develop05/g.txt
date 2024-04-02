@@ -1,0 +1,3 @@
+temple recommend, renew byApr, 100, System.Func`1[System.Boolean] 
+scripture study, daily 20mins(at least), 50
+attend temple , once a month, 100, 0, 12, 1000

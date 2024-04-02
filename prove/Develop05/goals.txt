@@ -1,0 +1,3 @@
+Temple recommend, renew, 100, System.Func`1[System.Boolean] 
+cold shower, mon-fri, 20
+attend temple, once a month, 50, 0, 12, 1000
